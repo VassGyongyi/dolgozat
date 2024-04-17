@@ -5,10 +5,11 @@ import Form from "react-bootstrap/Form";
 export default function Urlap() {
   const { kategoriaLista, setKategoriaLista, tesztLista, setTesztLista } =
     useAdatContext();
-
+const katLista=["Természettudomány", "Történelem"]
   return (
     <>
-      <Form.Select aria-label="Default select example">
+    
+     <Form.Select aria-label="Default select example">
         onChange=
         {(event) => {
           setKategoriaLista(event.target.value);
@@ -22,7 +23,7 @@ export default function Urlap() {
             </option>
           );
         })}
-      </Form.Select>
+      </Form.Select> 
     </>
   );
 }
